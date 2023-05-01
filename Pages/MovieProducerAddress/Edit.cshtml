@@ -1,0 +1,65 @@
+﻿@page
+@model TestingWebAppRazorPages.Pages.MovieProducerAddress.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ProducerAddress</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ProducerAddress.ProducerAddressId" />
+            <div class="form-group">
+                <label asp-for="ProducerAddress.Address1" class="control-label"></label>
+                <input asp-for="ProducerAddress.Address1" class="form-control" />
+                <span asp-validation-for="ProducerAddress.Address1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProducerAddress.Address2" class="control-label"></label>
+                <input asp-for="ProducerAddress.Address2" class="form-control" />
+                <span asp-validation-for="ProducerAddress.Address2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProducerAddress.City" class="control-label"></label>
+                <input asp-for="ProducerAddress.City" class="form-control" />
+                <span asp-validation-for="ProducerAddress.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProducerAddress.Zipcode" class="control-label"></label>
+                <input asp-for="ProducerAddress.Zipcode" class="form-control" />
+                <span asp-validation-for="ProducerAddress.Zipcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProducerAddress.State" class="control-label"></label>
+                <input asp-for="ProducerAddress.State" class="form-control" />
+                <span asp-validation-for="ProducerAddress.State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProducerAddress.Country" class="control-label"></label>
+                <input asp-for="ProducerAddress.Country" class="form-control" />
+                <span asp-validation-for="ProducerAddress.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProducerAddress.ProducerId" class="control-label"></label>
+                <select asp-for="ProducerAddress.ProducerId" class="form-control" asp-items="ViewBag.ProducerId"></select>
+                <span asp-validation-for="ProducerAddress.ProducerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
