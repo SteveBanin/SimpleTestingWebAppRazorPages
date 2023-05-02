@@ -1,7 +1,7 @@
 # Simple Testing WebApp RazorPages (.Net Core)
 
-### RazorPasge is based on monolithic approach (without separation of concern)
-- Deciding on which architecture pattern best fit the problem context at hand
+### RazorPages is based on a monolithic approach (without separation of concern)
+- Deciding on which architecture pattern best fits the problem context at hand.
 
 ### NOTE
 - This testing project is currently under development
